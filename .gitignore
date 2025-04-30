@@ -1,0 +1,12 @@
+# Cabal build artifacts
+dist/
+dist-newstyle/
+.cabal/
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+*.prof
+*.eventlog

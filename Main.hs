@@ -1,5 +1,8 @@
 module Main where
 
+-- Import needed for exception handling
+
+import System.IO.Error (catchIOError)
 import System.Environment
 import System.IO
 import qualified Data.Map as Map
@@ -150,5 +153,3 @@ try action = (Right <$> action) `catch` (return . Left)
     catch :: IO a -> (IOError -> IO a) -> IO a
     catch = catchIOError
     
--- Import needed for exception handling
-import System.IO.Error (catchIOError)

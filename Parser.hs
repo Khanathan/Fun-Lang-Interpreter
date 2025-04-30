@@ -96,7 +96,7 @@ parens p = do token (char '(')
 
 -- Expression parser
 expr :: Parser Expr
-expr = letExpr <|> ifExpr <|> lambdaExpr <|> appExpr
+expr = letExpr <|> ifExpr <|> eqExpr
 
 -- Expression application (function application or atomic)
 appExpr :: Parser Expr
@@ -148,19 +148,20 @@ addExpr = do e1 <- multExpr
                           e2 <- multExpr
                           rest (Plus e1 e2))
                    <|> (do token (char '-')
-                          e2 <- multExpr
-                          rest (Minus e1 e2))
+                           e2 <- multExpr
+                           rest (Minus e1 e2))
                    <|> return e1
 
--- Term expression parser (currently just atomic expressions)
+-- Multiplication expression parser (placeholder for future)
 multExpr :: Parser Expr
-multExpr = termExpr
+multExpr = appExpr
 
 -- Term expression (atomic)
 termExpr :: Parser Expr
 termExpr = boolLiteral
        <|> intLiteral
        <|> variableExpr
+       <|> lambdaExpr
        <|> parens expr
 
 -- Boolean literal parser
