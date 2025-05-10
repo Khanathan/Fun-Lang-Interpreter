@@ -1,6 +1,6 @@
 # Fun - A Small Functional Programming Language
 
-This project implements a small functional programming language with type inference. It demonstrates key concepts in interpreter design including parsing, type checking, and evaluation.
+This is an interpreter for a small functional programming language with type inference, written in Haskell.
 
 ## Features
 
