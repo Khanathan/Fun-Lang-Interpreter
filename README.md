@@ -112,7 +112,7 @@ let add3 = \x -> x + 3 in twice add3 10
 * No modules or import system
 * No user-defined data types
 
-## Future Enhancements
+## Future Work
 
 * Pattern matching
 * Algebraic data types
