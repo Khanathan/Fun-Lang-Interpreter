@@ -98,13 +98,11 @@ Type: (t1 -> t1) -> t1 -> t1
 
 ```haskell
 // Define a factorial function using recursion
-let fact = \n -> if n == 0 then 1 else n * fact (n - 1) in
-fact 5
+let fact = \n -> if n == 0 then 1 else n * fact (n - 1) in fact 5
 
 // Define a higher-order function that applies a function twice
 let twice = \f -> \x -> f (f x) in
-let add3 = \x -> x + 3 in
-twice add3 10
+let add3 = \x -> x + 3 in twice add3 10
 ```
 
 ## Current Limitations
