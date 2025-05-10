@@ -1,4 +1,4 @@
-# MiniFun - A Small Functional Programming Language
+# MiniFunc - A Small Functional Programming Language
 
 This is an interpreter for a small functional programming language with type inference, written in Haskell.
 
