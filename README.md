@@ -6,7 +6,7 @@ This is an interpreter for a small functional programming language with type inf
 
 * **Typed Lambda Calculus**: Support for first-class functions, let bindings, and higher-order functions
 * **Hindley-Milner Type Inference**: Type system based on the ML family of languages
-* **Interactive REPL**: Try expressions directly in a read-eval-print loop
+* **Interactive REPL**: Evaluate expressions directly in a read-eval-print loop
 * **Modular Design**: Cleanly separated components for parsing, type checking, and evaluation
 
 ## Language Structure
