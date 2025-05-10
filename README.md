@@ -119,7 +119,3 @@ let add3 = \x -> x + 3 in twice add3 10
 * List comprehensions 
 * More primitive operations and standard library
 * Module system
-
-## Acknowledgments
-
-This project is inspired by the structure of functional languages like Haskell and ML, and demonstrates fundamental principles of programming language implementation.
