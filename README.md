@@ -21,6 +21,7 @@ The language supports:
 * Lambda expressions: `\x -> expr` or `λx -> expr`
 * Function application: `f x`
 * Let bindings: `let x = expr1 in expr2`
+* Single-line comments start with "//" 
 
 ## Project Structure
 
