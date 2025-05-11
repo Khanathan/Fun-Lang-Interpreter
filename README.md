@@ -92,7 +92,7 @@ let map = \f -> \xs -> if xs == 0 then 0 else f xs in map (\x -> x + 1) 5
 if true then (if false then 0 else 1) else 2
 ```
 
-Source files are evaluated line by line. One way to execute a source file is by using :load
+Source files are evaluated line by line. One way to interpret a source file is by using :load
 
 ![sample load](https://github.com/user-attachments/assets/301fe81f-450a-48d9-8c2c-94b53b10954d)
 
