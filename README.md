@@ -1,6 +1,6 @@
 # MiniFunc - A Small Functional Programming Language
 
-This is an interpreter for a small functional programming language with type inference, written in Haskell.
+This is an interpreter written in Haskell for a small functional programming language with type inference.
 
 ## Features
 
