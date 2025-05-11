@@ -1,10 +1,11 @@
-name:                funlang
+name:                MiniFunc
 version:             0.1.0.0
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable funlang
+executable MiniFunc
   main-is:             Main.hs
+  hs-source-dirs:      ./src
   other-modules:       AST, Parser, TypeChecker, Evaluator
   build-depends:       base >=4.9,
                        containers >=0.5,

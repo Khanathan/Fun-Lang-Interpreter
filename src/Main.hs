@@ -7,6 +7,7 @@ import System.Environment
 import System.IO
 import qualified Data.Map as Map
 import AST
+import Data.List (isPrefixOf)
 import Parser
 import TypeChecker
 import Evaluator
@@ -83,9 +84,12 @@ processFile fileName = do
     then do
       contents <- readFile fileName
       let expressions = lines contents
+      let filteredExpressions = filter (not . isComment) expressions
       putStrLn $ "Loaded file: " ++ fileName
-      processExpressions expressions
+      processExpressions filteredExpressions
     else putStrLn $ "File not found: " ++ fileName
+  where
+    isComment line = "//" `isPrefixOf` line
 
 -- Process multiple expressions
 processExpressions :: [String] -> IO ()
