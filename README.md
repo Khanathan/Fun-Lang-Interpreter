@@ -120,3 +120,4 @@ As the the focus of this project was basic features and type checking, many comm
 * List comprehensions 
 * More primitive operations and standard library
 * Module system
+* And more
