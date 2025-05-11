@@ -71,40 +71,31 @@ cabal run -- factorial.mf
 
 ### Interactive REPL
 
-```
-$ cabal run
-MiniFunc Interpreter - A small functional language
-Type :help for available commands
-Type :quit to exit
+The interactive REPL in action:
 
-> 1 + 2
-Type: Int
-Result: 3
+![sample run](https://github.com/user-attachments/assets/24f3d381-f184-49a0-8cc2-4c13a014d30f)
 
-> \x -> x + 1
-Type: Int -> Int
-Result: <function>
-
-> let double = \x -> x + x in double 5
-Type: Int
-Result: 10
-
-> :type \f -> \x -> f (f x)
-Type: (t1 -> t1) -> t1 -> t1
-
-> :quit
-```
 
 ### Sample Program
 
 ```haskell
-// Define a factorial function using recursion
-let fact = \n -> if n == 0 then 1 else n * fact (n - 1) in fact 5
+// Define a factorial function using recursion and let binding
+let sum = (\x -> (\y -> x + y)) in sum 10 10
 
 // Define a higher-order function that applies a function twice
-let twice = \f -> \x -> f (f x) in
-let add3 = \x -> x + 3 in twice add3 10
+let twice = \f -> \x -> f (f x) in (let add3 = \x -> x + 3 in twice add3 10)
+
+// Anonymous functions as arguments
+let map = \f -> \xs -> if xs == 0 then 0 else f xs in map (\x -> x + 1) 5
+
+// Testing boolean logic
+if true then (if false then 0 else 1) else 2
 ```
+
+Source files are evaluated line by line. One way to interpret a source file is by using :load
+
+![sample load](https://github.com/user-attachments/assets/301fe81f-450a-48d9-8c2c-94b53b10954d)
+
 
 ## Current Limitations
 As the the focus of this project was basic features and type checking, many common language features have not been implemented:
