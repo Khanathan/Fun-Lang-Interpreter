@@ -71,29 +71,9 @@ cabal run -- factorial.mf
 
 ### Interactive REPL
 
-```
-$ cabal run
-MiniFunc Interpreter - A small functional language
-Type :help for available commands
-Type :quit to exit
+The interactive REPL in action:
+![sample run](https://github.com/user-attachments/assets/24f3d381-f184-49a0-8cc2-4c13a014d30f)
 
-> 1 + 2
-Type: Int
-Result: 3
-
-> \x -> x + 1
-Type: Int -> Int
-Result: <function>
-
-> let double = \x -> x + x in double 5
-Type: Int
-Result: 10
-
-> :type \f -> \x -> f (f x)
-Type: (t1 -> t1) -> t1 -> t1
-
-> :quit
-```
 
 ### Sample Program
 
