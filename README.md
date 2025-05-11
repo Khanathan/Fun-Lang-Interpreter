@@ -107,7 +107,7 @@ let add3 = \x -> x + 3 in twice add3 10
 ```
 
 ## Current Limitations
-As the the focus of this project was basic features and type checking, many other common features have not been implemented.
+As the the focus of this project was basic features and type checking, many other common features have not been implemented:
 * Limited set of primitive operations
 * No support for data structures like lists or records
 * No modules or import system
