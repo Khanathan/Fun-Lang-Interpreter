@@ -72,6 +72,7 @@ cabal run -- factorial.mf
 ### Interactive REPL
 
 The interactive REPL in action:
+
 ![sample run](https://github.com/user-attachments/assets/24f3d381-f184-49a0-8cc2-4c13a014d30f)
 
 
